@@ -1,0 +1,23 @@
+/*                          */
+/***** Fix close button *****/
+/*                          */
+
+/* Hide the close button by default */
+
+#TabsToolbar .close-icon {
+  display: none !important;
+}
+
+/* Show the close button on hover */
+
+#TabsToolbar .tabbrowser-tab:not([pinned]):hover .close-icon {
+  display: inline-block !important;
+}
+
+/* Show the close button on selected tab - you can comment this out */
+
+/*
+#TabsToolbar .tabbrowser-tab[selected]:not([pinned]) .close-icon {
+  display: inline-block !important;
+}
+*/
