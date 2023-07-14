@@ -7,7 +7,7 @@ This is a very minimal file with only a few rules, so it should be compatible wi
 
 - The tab close button is hidden by default
 - It shows up when you hover over a tab
-- You can enable showing
+- You can enable always showing the close button on active tabs
 
 ## Screenshots
 
