@@ -1,23 +1,35 @@
-/*                          */
-/***** Fix close button *****/
-/*                          */
+/* Close button behavior */
 
 /* Hide the close button by default */
-
 #TabsToolbar .close-icon {
-  display: none !important;
+    display: none !important;
 }
 
 /* Show the close button on hover */
-
 #TabsToolbar .tabbrowser-tab:not([pinned]):hover .close-icon {
-  display: inline-block !important;
+    display: inline-block !important;
 }
 
-/* Show the close button on selected tab - you can comment this out */
+/* Show the close button on selected tab */
+/* #TabsToolbar .tabbrowser-tab[selected]:not([pinned]) .close-icon {
+    display: inline-block !important;
+} */
 
-/*
-#TabsToolbar .tabbrowser-tab[selected]:not([pinned]) .close-icon {
-  display: inline-block !important;
+/* Tab bar */
+
+/* Remove the space on the left of the tab bar */
+.titlebar-spacer[type="pre-tabs"] {
+    display: none !important;
 }
-*/
+
+/* Also remove the separator */
+#tabbrowser-tabs {
+    border-inline-start: none !important;
+}
+
+/* And the space between pinned and unpinned tabs */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+    > #tabbrowser-arrowscrollbox
+    > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+    margin-inline-start: unset !important;
+}
